@@ -1,0 +1,13 @@
+$gridcol: 12;
+
+
+@for $i from 1 through $gridcol {
+    .col-#{$i} {
+        width: percentage($i / $gridcol);
+    }
+}
+
+.dflex,
+.dgrid {
+    display: flex;
+}
