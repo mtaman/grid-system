@@ -1,13 +1,77 @@
 $gridcol: 12;
+$container: 1320px;
+$con-f: 100%;
 
+.container {
+    max-width: $container;
+}
 
+.container-f {
+    max-width: $con-f;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dflex {
+    display: flex;
+}
+
+//gap
+.gap10 {
+    gap: 10px;
+}
+
+.gap15 {
+    gap: 15px;
+}
+
+.gap20 {
+    gap: 20px;
+}
+
+/*
+================================
+            column lop
+================================
+*/
 @for $i from 1 through $gridcol {
     .col-#{$i} {
         width: percentage($i / $gridcol);
     }
 }
 
-.dflex,
-.dgrid {
-    display: flex;
+/*
+================================
+            Breakpoint
+================================
+*/
+/*
+When the screen (browser window)
+gets smaller than 576px, each column should have a width of 100%:
+*/
+@media only screen and (max-width: 576px) {
+
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+
 }
+
+@media only screen and (max-width: 768px) {
+    .col-s {
+        width: 100% !important;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media only screen and (min-width: 992px) {}
+
+// X-Large devices (large desktops, 1200px and up)
+@media only screen and (min-width: 1200px) {}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media only screen and (min-width: 1400px) {}

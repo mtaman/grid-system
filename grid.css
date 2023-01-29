@@ -1,3 +1,37 @@
+.container {
+  max-width: 1320px;
+}
+
+.container-f {
+  max-width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dflex {
+  display: flex;
+}
+
+.gap10 {
+  gap: 10px;
+}
+
+.gap15 {
+  gap: 15px;
+}
+
+.gap20 {
+  gap: 20px;
+}
+
+/*
+================================
+            column lop
+================================
+*/
 .col-1 {
   width: 8.33333%;
 }
@@ -46,7 +80,24 @@
   width: 100%;
 }
 
-.dflex,
-.dgrid {
-  display: flex;
+/*
+================================
+            Breakpoint
+================================
+*/
+/*
+When the screen (browser window)
+gets smaller than 576px, each column should have a width of 100%:
+*/
+@media only screen and (max-width: 576px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .col-s {
+    width: 100% !important;
+  }
 }
